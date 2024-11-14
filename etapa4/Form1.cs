@@ -1,0 +1,53 @@
+namespace ejercicio1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int edad = int.Parse(textBox1.Text);
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("No puedes dejar vacio, completalo :)", "!");
+            }
+            if (!int.TryParse(textBox1.Text, out edad))
+            {
+                MessageBox.Show("ingrese un numero por favor >:D", "!");
+            }
+
+            if (ingresos_mensuales.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecciona un rango de ingresos.", "!");
+            }
+
+            string opcion = ingresos_mensuales.SelectedItem.ToString();
+            if (edad >= 19 && (opcion == "100,001 - 200,000" || opcion == "Más de 200,000"))
+            {
+                MessageBox.Show("¡Felicidades! Puedes cobrar la beca");
+            }
+            else
+            {
+                MessageBox.Show("No cumples con los requisitos para cobrar la beca");
+            }
+        }
+    }
+}
