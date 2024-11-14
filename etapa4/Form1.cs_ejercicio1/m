@@ -40,9 +40,9 @@ namespace ejercicio1
             }
 
             string opcion = ingresos_mensuales.SelectedItem.ToString();
-            if (edad >= 19 && (opcion == "100,001 - 200,000" || opcion == "Más de 200,000"))
+            if (edad >= 19 && (opcion == "100,001 - 200,000" || opcion == "MÃ¡s de 200,000"))
             {
-                MessageBox.Show("¡Felicidades! Puedes cobrar la beca");
+                MessageBox.Show("Â¡Felicidades! Puedes cobrar la beca");
             }
             else
             {
